@@ -2,7 +2,14 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { ResultCard } from './ResultCard'
 
-const API_BASE = 'http://localhost:8000'
+// Prefer VITE_API_BASE_URL when provided; fall back to Render backend URL in production,
+// and localhost for local development.
+const API_BASE =
+  import.meta.env.VITE_API_BASE_URL ||
+  (import.meta.env.DEV
+    ? 'http://localhost:8000'
+    : 'https://smartdocfinder-ai-powered-document-2ls4.onrender.com')
+
 const SAMPLE_QUERIES = [
   'quantum physics basics',
   'neural networks for image recognition',
@@ -48,7 +55,7 @@ export function SearchPage() {
       setResults(res.data.results || [])
     } catch (err) {
       console.error(err)
-      setError('Failed to search. Is the backend running on port 8000?')
+      setError('Search failed – please check that the SmartDocFinder backend is reachable.')
     } finally {
       setLoading(false)
     }

@@ -145,11 +145,19 @@ This will:
 
 ### Start the FastAPI server
 
-Still from the `backend` directory, after preprocessing:
+Still from the `backend` directory, after preprocessing (local dev):
 
 ```bash
 uvicorn src.api:app --reload --port 8000
 ```
+
+For **Render** or any host where the working directory is the repo root, use:
+
+```bash
+uvicorn backend.src.api:app --host 0.0.0.0 --port $PORT
+```
+
+where `$PORT` is provided by the host (Render defaults to 10000).
 
 FastAPI will:
 

@@ -19,7 +19,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
-        "https://smartdocfinder-frontend-xxxx.onrender.com",  # your Render frontend URL
+             "https://smartdocfinder-ai-powered-document-2ls4.onrender.com/search",
     ],
     allow_credentials=True,
     allow_methods=["*"],

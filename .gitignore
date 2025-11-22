@@ -9,7 +9,3 @@ frontend/dist/
 frontend/.vite/
 
 # Keep data/docs in git so hosting has documents
-# but ignore generated cache/index artifacts
-data/cache.db
-data/index.faiss
-data/index_meta.json
