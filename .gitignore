@@ -5,7 +5,6 @@ __pycache__/
 *.pyc
 node_modules/
 backend/.venv/
-frontend/dist/
 frontend/.vite/
 
 # Keep data/docs in git so hosting has documents
