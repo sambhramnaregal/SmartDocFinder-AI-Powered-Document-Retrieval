@@ -4,11 +4,14 @@ import { ResultCard } from './ResultCard'
 
 // Prefer VITE_API_BASE_URL when provided; fall back to Render backend URL in production,
 // and localhost for local development.
-const API_BASE =
-  import.meta.env.VITE_API_BASE_URL ||
-  (import.meta.env.DEV
-    ? 'http://localhost:8000'
-    : 'https://smartdocfinder-ai-powered-document.onrender.com')
+
+// const API_BASE =
+//   import.meta.env.VITE_API_BASE_URL ||
+//   (import.meta.env.DEV
+//     ? 'http://localhost:8000'
+//     : 'https://smartdocfinder-ai-powered-document.onrender.com')
+
+const API_BASE ='https://smartdocfinder-ai-powered-document.onrender.com'
 
 const SAMPLE_QUERIES = [
   'quantum physics basics',
