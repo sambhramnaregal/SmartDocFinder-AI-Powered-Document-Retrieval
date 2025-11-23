@@ -8,7 +8,7 @@ const API_BASE =
   import.meta.env.VITE_API_BASE_URL ||
   (import.meta.env.DEV
     ? 'http://localhost:8000'
-    : 'https://smartdocfinder-ai-powered-document-2ls4.onrender.com')
+    : 'https://smartdocfinder-ai-powered-document.onrender.com')
 
 const SAMPLE_QUERIES = [
   'quantum physics basics',
